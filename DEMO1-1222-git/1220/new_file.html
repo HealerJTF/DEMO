@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="count" />
+		<script>
+			window.onload = function(){
+				var num = 0;
+				function addCount(){
+					document.getElementById('count').value = num;
+					num = num + 1;
+					setTimeout(function(){
+						addCount();
+					},1000);
+				}
+				addCount();
+			}
+		</script>
+	</body>
+</html>
